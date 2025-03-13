@@ -1,0 +1,16 @@
+@mixin font-face($name, $file, $weight: normal, $style: normal) {
+    @font-face {
+        font-family: $name;
+        src: url('../fonts/#{$file}.woff2') format('woff2'),
+             url('../fonts/#{$file}.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
+@include font-face('Neue Montreal', 'NeueMontreal-Bold', 700);
+@include font-face('Neue Montreal', 'NeueMontreal-Medium', 500);
+@include font-face('Neue Montreal', 'NeueMontreal-Regular', 400);
+@include font-face('Neue Montreal', 'NeueMontreal-Light', 300);
+@include font-face('Impact', 'Impact', 400);
