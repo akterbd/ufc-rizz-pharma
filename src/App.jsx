@@ -19,6 +19,13 @@ import onlineSupport from "./assets/img/online-support.svg";
 import freeShipping from "./assets/img/free-shipping.svg";
 import bestValue from "./assets/img/best-value.svg";
 import online100Convenient100 from "./assets/img/bg-100.png";
+import emailIcon from "./assets/img/email-icon.svg";
+import hipaa from "./assets/img/hipaa.png";
+import facebookIcon from "./assets/img/facebook-icon.svg";
+import instagramIcon from "./assets/img/instagram-icon.svg";
+import himsCom from "./assets/img/hims-com.png";
+import subscribeIcon from "./assets/img/subscribe-icon.svg";
+import rizzPharma from "./assets/img/rizz-pharma.png";
 import { Link } from "react-router-dom";
 import ProductSlider from "./components/ProductSlider";
 import CategorySlider from "./components/CategorySlider";
@@ -31,28 +38,28 @@ function App() {
           <header className="main-header">
             <div className="container">
               <nav className="navbar navbar-expand-lg navbar-dark">
-                <a className="navbar-brand" href="#">
+                <Link className="navbar-brand" to="/">
                   <img src={logo} alt="Logo"/>
-                </a>
+                </Link>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span className="navbar-toggler-icon"></span>
                 </button>
 
                 <div className="collapse navbar-collapse flex-column align-items-end" id="navbarSupportedContent">
-                  <div className="main-na d-flex">
+                  <div className="main-nav d-flex">
                     <ul className="navbar-nav ml-auto">
                       <li className="nav-item active">
-                        <a className="nav-link" href="#">Home</a>
+                        <Link className="nav-link" to="/">Home</Link>
                       </li>
                       <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
                           Category
                         </a>
                         <div className="dropdown-menu">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <div className="dropdown-divider"></div>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <Link className="dropdown-item" to="#">Dropdone Item 1</Link>
+                          <Link className="dropdown-item" to="#">Dropdone Item 2</Link>
+                          <Link className="dropdown-item" to="#">Dropdone Item 3</Link>
+                          <Link className="dropdown-item" to="#">Dropdone Item 4</Link>
                         </div>
                       </li>
                       <li className="nav-item dropdown">
@@ -60,28 +67,28 @@ function App() {
                           Top Products
                         </a>
                         <div className="dropdown-menu">
-                          <a className="dropdown-item" href="#">Action</a>
-                          <a className="dropdown-item" href="#">Another action</a>
-                          <div className="dropdown-divider"></div>
-                          <a className="dropdown-item" href="#">Something else here</a>
+                          <Link className="dropdown-item" to="#">Dropdone Item 1</Link>
+                          <Link className="dropdown-item" to="#">Dropdone Item 2</Link>
+                          <Link className="dropdown-item" to="#">Dropdone Item 3</Link>
+                          <Link className="dropdown-item" to="#">Dropdone Item 4</Link>
                         </div>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link">Contact Us</a>
+                        <Link className="nav-link" to="">Contact Us</Link>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link">FAQs</a>
+                        <Link className="nav-link" to="">FAQs</Link>
                       </li>
                     </ul>
-                    <ul className="social d-flex m-0 pl-3">
+                    <ul className="social d-flex">
                       <li><a href="#"><img src={instagram} alt="Instagram" /></a></li>
                       <li><a href="#"><img src={facebook} alt="Facebook" /></a></li>
                     </ul>
                   </div>
                   <div className="auth-area d-flex align-items-center">
-                    <Link to="/sign-up">Sign Up</Link>
-                    <Link to="/sign-up">Log In</Link>
-                    <button className="btn btn-link"><img src={cartIcon} alt="Cart"/></button>
+                    <Link className="sign-up" to="/sign-up">Sign Up</Link>
+                    <Link to="/login">Log In</Link>
+                    <span className="cart"><img src={cartIcon} alt="Cart"/></span>
                   </div>
                 </div>
               </nav>
@@ -215,28 +222,109 @@ function App() {
           <section className="reviews">
             <ReviewSlider />
           </section>
-          <footer>
-            <div className="container">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="newsletter">
-                      <h3>Let’s Stay In Touch</h3>
-                      <p>Keep up to date with our latest news & special offers.</p>
-                      <div className="input-group">
-                        <input type="text" className="form-control border-left-0" placeholder="Search by product/treatment" />
-                        <div className="input-group-prepend">
-                          <span className="input-group-text">
-                            <img src={searchIcon} alt="Search" />
-                          </span>
-                        </div>
+          
+      </div>
+      <footer>
+        <div className="container">
+            <div className="row align-items-end">
+              <div className="col-md-6">
+                <div className="newsletter">
+                  <div className="newsletter-content">
+                    <h3>Let’s Stay In Touch</h3>
+                    <p>Keep up to date with our latest news & special offers.</p>
+                  </div>
+                  <div className="input-group">
+                    <input type="text" className="form-control border-left-0" placeholder="enter your email" />
+                    <div className="input-group-prepend">
+                      <span className="input-group-text">
+                        <img src={subscribeIcon} alt="Search" />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-md-6">
+                <div className="d-flex justify-content-between">
+                  <div className="footer-menu">
+                    <div className="footer-wedget">
+                      <h4>Quick Links</h4>
+                      <ul>
+                        <li>
+                          <Link to="#">Erectile Dysfunction</Link>
+                        </li>
+                        <li>
+                          <Link to="#">Weight Loss</Link>
+                        </li>
+                        <li>
+                          <Link to="#">Men’s Hair Loss</Link>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div className="footer-wedget">
+                      <h4>Contact Info</h4>
+                      <div className="email d-flex align-items-center">
+                        <span className="icon"><img src={emailIcon} alt="Email: " /></span>
+                        <Link to="mailto:hello@rizzpharma.com">hello@rizzpharma.com</Link>
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6"></div>
+                  <div className="footer-menu">
+                    <div className="footer-wedget">
+                      <h4>Our Company</h4>
+                      <ul>
+                        <li>
+                          <Link to="#">HIPAA Notice</Link>
+                        </li>
+                        <li>
+                          <Link to="#">Privacy Policy</Link>
+                        </li>
+                        <li>
+                          <Link to="#">Return & Refund Policy</Link>
+                        </li>
+                        <li>
+                          <Link to="#">Terms Of Use</Link>
+                        </li>
+                        <li>
+                          <Link to="#">CCPA Opt-Out</Link>
+                        </li>
+                        <li>
+                          <Link to="#">Opt-Out Preferences</Link>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-          </footer>
-      </div>
+            <div className="row align-items-center">
+              <div className="col-md-6">
+                  <div className="hippa-logo">
+                    <img src={hipaa} alt="hipaa" />
+                  </div>
+              </div>
+              <div className="col-md-6">
+                <div className="social-icons">
+                  <div className="social-item"><Link><img src={facebookIcon} alt="Facebook" /></Link></div>
+                  <div className="social-item"><Link><img src={instagramIcon} alt="Instagram" /></Link></div>
+                </div>
+                <div className="copy-right">
+                  <div className="hims-logo">
+                    <img src={himsCom} alt="Hims Com" />
+                  </div>
+                  <div className="hims-logo">
+                    Copyright &copy; {new Date().getFullYear()} Rizz Pharma All Right Reserved - Built by Business Web Social
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-12">
+                <img className="branding-logo" src={rizzPharma} alt="Rizz Pharma" />
+              </div>
+            </div>
+        </div>
+      </footer>
 
     </>
   )

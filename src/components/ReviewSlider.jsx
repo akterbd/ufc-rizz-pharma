@@ -5,6 +5,7 @@ import quate from "./../assets/img/quate.svg";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import StarRating from "./StarRating";
 
 const reviews = [
   { id: 1, name: "John Williams", designation:"Lead designer", rating:4, authorImg:"./src/assets/img/review-author.png", review: "I’ve tried every home remedy and hair care treatment but ended up with long waits and no results. Since I’ve started using Hims my hair has grown, thickened, and darkened tremendously." },
@@ -36,14 +37,16 @@ const ReviewSlider = () => {
                     <img src={quate} alt="quate" />
                 </div>
                 <div className="quate">{review.review}</div>
-                <div className="review-start"></div>
+                <div className="review-star">
+                  <StarRating value={Number(review.rating)} />
+                </div>
                 <div className="review-author">
                     <div className="author-img">
                         <img src={review.authorImg} alt="Author Img" />
                     </div>
                     <div className="author-info">
                         <h5>{review.name}</h5>
-                        <p>{review.designation}</p>
+                        <p className="mb-0">{review.designation}</p>
                     </div>
                 </div>
             </div>
