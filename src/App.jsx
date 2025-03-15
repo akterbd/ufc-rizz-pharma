@@ -297,7 +297,7 @@ function App() {
                 </div>
               </div>
             </div>
-            <div className="row align-items-center">
+            <div className="row align-items-center footer-middle">
               <div className="col-md-6">
                   <div className="hippa-logo">
                     <img src={hipaa} alt="hipaa" />
