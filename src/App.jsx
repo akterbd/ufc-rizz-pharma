@@ -22,6 +22,7 @@ import online100Convenient100 from "./assets/img/bg-100.png";
 import { Link } from "react-router-dom";
 import ProductSlider from "./components/ProductSlider";
 import CategorySlider from "./components/CategorySlider";
+import ReviewSlider from "./components/ReviewSlider";
 
 function App() {
   return (
@@ -211,6 +212,30 @@ function App() {
               </div>
             </div>
           </section>
+          <section className="reviews">
+            <ReviewSlider />
+          </section>
+          <footer>
+            <div className="container">
+                <div className="row">
+                  <div className="col-md-6">
+                    <div className="newsletter">
+                      <h3>Let’s Stay In Touch</h3>
+                      <p>Keep up to date with our latest news & special offers.</p>
+                      <div className="input-group">
+                        <input type="text" className="form-control border-left-0" placeholder="Search by product/treatment" />
+                        <div className="input-group-prepend">
+                          <span className="input-group-text">
+                            <img src={searchIcon} alt="Search" />
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-6"></div>
+                </div>
+            </div>
+          </footer>
       </div>
 
     </>
