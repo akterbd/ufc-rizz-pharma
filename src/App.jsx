@@ -21,8 +21,8 @@ import { Link } from "react-router-dom";
 import ProductSlider from "@/components/ProductSlider";
 import CategorySlider from "@/components/CategorySlider";
 import ReviewSlider from "@/components/ReviewSlider";
-import Header from "@/layouts/header/Header";
-import Footer from "@/layouts/footer/Footer";
+import Header from "@/layouts/Header/Header";
+import Footer from "@/layouts/Footer/Footer";
 
 function App() {
   return (
