@@ -2,9 +2,9 @@ import React from 'react';
 import logo from "./../../assets/img/UFC_RIZZ Logo.png";
 import instagram from "./../../assets/img/instagram-outline.svg";
 import facebook from "./../../assets/img/facebook-outline.svg";
-import cartIcon from "./../../assets/img/cart-white.svg";
 import { Link, useLocation } from 'react-router-dom';
 import "./header.scss";
+import CartIcon from './CartIcon';
 const Header = () => {
   const location = useLocation();
   return (
@@ -61,7 +61,7 @@ const Header = () => {
               <div className="auth-area d-flex align-items-center">
                 <Link className="sign-up" to="/sign-up">Sign Up</Link>
                 <Link to="/login">Log In</Link>
-                <span className="cart"><img src={cartIcon} alt="Cart"/></span>
+                <CartIcon />
               </div>
             </div>
           </nav>
