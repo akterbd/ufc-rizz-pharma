@@ -1,28 +1,28 @@
 
-import BodyBg from "./assets/img/body-bg.webp";
+import BodyBg from "@/assets/img/body-bg.webp";
 
-import searchIcon from "./assets/img/search-icon.svg";
-import shapeStar from "./assets/img/shape-star-icon.svg";
-import shapeStar3 from "./assets/img/shape-3.svg";
-import shapeStar2 from "./assets/img/shape-2.svg";
-import WeightLose from "./assets/img/portrait-fitness-people 1.png";
-import sexualHealth from "./assets/img/sexual-health.png";
-import brainHealth from "./assets/img/brain-health.png";
-import testosteroneHRT from "./assets/img/testosterone-HRT.png";
-import athleticPerfomance from "./assets/img/Athletic-Perfomance.png";
-import beautyHairLoss from "./assets/img/Beauty-Hair-Loss.png";
-import securePayment from "./assets/img/secure-payment.svg";
-import onlineSupport from "./assets/img/online-support.svg";
-import freeShipping from "./assets/img/free-shipping.svg";
-import bestValue from "./assets/img/best-value.svg";
-import online100Convenient100 from "./assets/img/bg-100.png";
+import searchIcon from "@/assets/img/search-icon.svg";
+import shapeStar from "@/assets/img/shape-star-icon.svg";
+import shapeStar3 from "@/assets/img/shape-3.svg";
+import shapeStar2 from "@/assets/img/shape-2.svg";
+import WeightLose from "@/assets/img/portrait-fitness-people 1.png";
+import sexualHealth from "@/assets/img/sexual-health.png";
+import brainHealth from "@/assets/img/brain-health.png";
+import testosteroneHRT from "@/assets/img/testosterone-HRT.png";
+import athleticPerfomance from "@/assets/img/Athletic-Perfomance.png";
+import beautyHairLoss from "@/assets/img/Beauty-Hair-Loss.png";
+import securePayment from "@/assets/img/secure-payment.svg";
+import onlineSupport from "@/assets/img/online-support.svg";
+import freeShipping from "@/assets/img/free-shipping.svg";
+import bestValue from "@/assets/img/best-value.svg";
+import online100Convenient100 from "@/assets/img/bg-100.png";
 
 import { Link } from "react-router-dom";
-import ProductSlider from "./components/ProductSlider";
-import CategorySlider from "./components/CategorySlider";
-import ReviewSlider from "./components/ReviewSlider";
-import Header from "./Layouts/Header";
-import Footer from "./layouts/Footer";
+import ProductSlider from "@/components/ProductSlider";
+import CategorySlider from "@/components/CategorySlider";
+import ReviewSlider from "@/components/ReviewSlider";
+import Header from "@/layouts/header/Header";
+import Footer from "@/layouts/footer/Footer";
 
 function App() {
   return (

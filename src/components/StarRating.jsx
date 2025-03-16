@@ -1,6 +1,6 @@
 import React from 'react';
-import starFill from "./../assets/img/star-fill.svg";
-import starOutline from "./../assets/img/star-outline.svg";
+import starFill from "@/assets/img/star-fill.svg";
+import starOutline from "@/assets/img/star-outline.svg";
 const StarRating = ({ value }) => {
   return (
     <>

@@ -1,6 +1,6 @@
 import React from "react";
-import addToCartDark from "./../assets/img/add-to-cart-dark.svg";
-import rizzReta from "./../assets/img/Rizz-Reta-GLP3-24mg.png";
+import addToCartDark from "@/assets/img/add-to-cart-dark.svg";
+import rizzReta from "@/assets/img/Rizz-Reta-GLP3-24mg.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Navigation } from "swiper/modules";
 import "swiper/css";

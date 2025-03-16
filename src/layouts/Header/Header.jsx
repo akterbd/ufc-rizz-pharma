@@ -1,9 +1,10 @@
 import React from 'react';
-import logo from "./../assets/img/UFC_RIZZ Logo.png";
-import instagram from "./../assets/img/instagram-outline.svg";
-import facebook from "./../assets/img/facebook-outline.svg";
-import cartIcon from "./../assets/img/cart-white.svg";
+import logo from "./../../assets/img/UFC_RIZZ Logo.png";
+import instagram from "./../../assets/img/instagram-outline.svg";
+import facebook from "./../../assets/img/facebook-outline.svg";
+import cartIcon from "./../../assets/img/cart-white.svg";
 import { Link } from 'react-router-dom';
+import "./header.scss";
 const Header = () => {
   return (
     <header className="main-header">

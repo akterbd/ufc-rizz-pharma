@@ -1,5 +1,5 @@
 import React from 'react'
-import emailIcon from "./../assets/img/email-icon.svg";
+import emailIcon from "./../../assets/img/email-icon.svg";
 import { Link } from 'react-router-dom'
 
 const FooterWedget = ({title, footerNavData, icon}) => {

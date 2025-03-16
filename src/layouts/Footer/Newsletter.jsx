@@ -1,4 +1,4 @@
-import subscribeIcon from "./../assets/img/subscribe-icon.svg";
+import subscribeIcon from "./../../assets/img/subscribe-icon.svg";
 
 const Newsletter = () => {
   return (
