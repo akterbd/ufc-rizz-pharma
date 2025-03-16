@@ -6,12 +6,14 @@ import './product-section.scss';
 import ProductSlider from './ProductSlider/ProductSlider';
 import { getAllCategories } from '../../store/slices/categories/categoryThunk';
 import { useEffect } from 'react';
+import { getProducts } from '../../store/slices/products/productThunk';
 
 const ProductSection = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getAllCategories());
+    dispatch(getProducts());
   }, [dispatch]);
 
   return (

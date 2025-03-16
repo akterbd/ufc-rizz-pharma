@@ -1,15 +1,19 @@
 import React from "react";
-import addToCartDark from "@/assets/img/add-to-cart-dark.svg";
-import rizzReta from "@/assets/img/Rizz-Reta-GLP3-24mg.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Grid, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/navigation";
 import "./product-slider.scss";
+import ProductItem from "../../ProductItem/ProductItem";
+import { useSelector } from "react-redux";
 
 const ProductSlider = () => {
   const items = Array.from({ length: 12 }, (_, i) => `Item ${i + 1}`);
+
+  const productLoading = useSelector((state) => state.products.loading);
+  const productList = useSelector((state) => state.products.items);
+  if (!productList) return;
 
   return (
     <div className="position-relative product-slider">
@@ -20,23 +24,9 @@ const ProductSlider = () => {
         spaceBetween={30}
         navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
       >
-        {items.map((item, index) => (
+        {productList.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="product-item">
-              <div className="badge-product">Research use only</div>
-              <div className="product-info">
-                <div className="product-thumb">
-                  <img src={rizzReta} alt="Product" />
-                </div>
-                <div className="product-title">Retarutide</div>
-              </div>
-              <div className="price-area">
-                <div className="price">$39.99/per month</div>
-                <div className="add-to-cart">
-                  <img src={addToCartDark} alt="Add to Cart" />
-                </div>
-              </div>              
-            </div>
+            <ProductItem {...item} />
           </SwiperSlide>
         ))}
       </Swiper>
