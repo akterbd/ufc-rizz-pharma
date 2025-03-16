@@ -24,8 +24,9 @@ const ReviewSlider = () => {
       <Swiper
         slidesPerView="auto"
         centeredSlides={true}
+        initialSlide={2}
         spaceBetween={20}
-        loop={true}
+        // loop={true}
         pagination={{ clickable: true }}
         modules={[Pagination]}
         className="mySwiper"

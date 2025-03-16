@@ -16,18 +16,13 @@ import onlineSupport from "./assets/img/online-support.svg";
 import freeShipping from "./assets/img/free-shipping.svg";
 import bestValue from "./assets/img/best-value.svg";
 import online100Convenient100 from "./assets/img/bg-100.png";
-import emailIcon from "./assets/img/email-icon.svg";
-import hipaa from "./assets/img/hipaa.png";
-import facebookIcon from "./assets/img/facebook-icon.svg";
-import instagramIcon from "./assets/img/instagram-icon.svg";
-import himsCom from "./assets/img/hims-com.png";
-import subscribeIcon from "./assets/img/subscribe-icon.svg";
-import rizzPharma from "./assets/img/rizz-pharma.png";
+
 import { Link } from "react-router-dom";
 import ProductSlider from "./components/ProductSlider";
 import CategorySlider from "./components/CategorySlider";
 import ReviewSlider from "./components/ReviewSlider";
 import Header from "./Layouts/Header";
+import Footer from "./layouts/Footer";
 
 function App() {
   return (
@@ -163,108 +158,7 @@ function App() {
           </section>
           
       </div>
-      <footer>
-        <div className="container">
-            <div className="row align-items-end">
-              <div className="col-md-6">
-                <div className="newsletter">
-                  <div className="newsletter-content">
-                    <h3>Let’s Stay In Touch</h3>
-                    <p>Keep up to date with our latest news & special offers.</p>
-                  </div>
-                  <div className="input-group">
-                    <input type="text" className="form-control border-left-0" placeholder="enter your email" />
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        <img src={subscribeIcon} alt="Search" />
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6">
-                <div className="d-flex justify-content-between">
-                  <div className="footer-menu">
-                    <div className="footer-wedget">
-                      <h4>Quick Links</h4>
-                      <ul>
-                        <li>
-                          <Link to="#">Erectile Dysfunction</Link>
-                        </li>
-                        <li>
-                          <Link to="#">Weight Loss</Link>
-                        </li>
-                        <li>
-                          <Link to="#">Men’s Hair Loss</Link>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div className="footer-wedget">
-                      <h4>Contact Info</h4>
-                      <div className="email d-flex align-items-center">
-                        <span className="icon"><img src={emailIcon} alt="Email: " /></span>
-                        <Link to="mailto:hello@rizzpharma.com">hello@rizzpharma.com</Link>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="footer-menu">
-                    <div className="footer-wedget">
-                      <h4>Our Company</h4>
-                      <ul>
-                        <li>
-                          <Link to="#">HIPAA Notice</Link>
-                        </li>
-                        <li>
-                          <Link to="#">Privacy Policy</Link>
-                        </li>
-                        <li>
-                          <Link to="#">Return & Refund Policy</Link>
-                        </li>
-                        <li>
-                          <Link to="#">Terms Of Use</Link>
-                        </li>
-                        <li>
-                          <Link to="#">CCPA Opt-Out</Link>
-                        </li>
-                        <li>
-                          <Link to="#">Opt-Out Preferences</Link>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row align-items-center footer-middle">
-              <div className="col-md-6">
-                  <div className="hippa-logo">
-                    <img src={hipaa} alt="hipaa" />
-                  </div>
-              </div>
-              <div className="col-md-6">
-                <div className="social-icons">
-                  <div className="social-item"><Link><img src={facebookIcon} alt="Facebook" /></Link></div>
-                  <div className="social-item"><Link><img src={instagramIcon} alt="Instagram" /></Link></div>
-                </div>
-                <div className="copy-right">
-                  <div className="hims-logo">
-                    <img src={himsCom} alt="Hims Com" />
-                  </div>
-                  <div className="hims-logo">
-                    Copyright &copy; {new Date().getFullYear()} Rizz Pharma All Right Reserved - Built by Business Web Social
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-md-12">
-                <img className="branding-logo" src={rizzPharma} alt="Rizz Pharma" />
-              </div>
-            </div>
-        </div>
-      </footer>
-
+      <Footer />
     </>
   )
 }

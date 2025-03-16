@@ -542,7 +542,7 @@ section.online100 {
     text-align: center;
     margin-bottom: 50px;
     span {
-      background: linear-gradient(180deg, #C1842D 0%, #ECC974 100%);
+      background: $heading-gradiant;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
