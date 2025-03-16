@@ -1,14 +1,27 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "./category-slider.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { getProductByCategory, getProducts } from "../../../store/slices/products/productThunk";
 
 const CategorySlider = () => {
+  const dispatch = useDispatch();
+  const categoryLoading = useSelector((state) => state.categories.loading);
+  const categoryList = useSelector((state) => state.categories.items);
+  if (!categoryList) return;
+
+
   const items = ["All", "Best Selling Products", "Weight Loss", "Beauty And Hair Loss", "Testosterone/HRT", "Sexual Health", "Weight Loss", "Beauty And Hair Loss", "Testosterone/HRT", "Sexual Health"];
   const [activeIndex, setActiveIndex] = useState(0);
-  const handleButtonClick = (index) => {
+  const handleButtonClick = (index, slug) => {
+    if(slug == "all"){
+      dispatch(getProducts());
+    } else {
+      dispatch(getProductByCategory(slug));
+    }
     setActiveIndex(index);
   };
   return (
@@ -22,11 +35,11 @@ const CategorySlider = () => {
           rows: 1,
         }}
       >
-        {items.map((item, index) => (
+        {categoryList.map((item, index) => (
           <SwiperSlide key={index}>
             <button className={`custom-btn-slide ${index === activeIndex ? "active" : ""}`}
-                onClick={() => handleButtonClick(index)}>
-              {item}
+                onClick={() => handleButtonClick(index, item.slug)}>
+              {item.name}
             </button>
           </SwiperSlide>
         ))}

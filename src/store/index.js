@@ -1,13 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
-import apiStatusSlice from './actionReducer/apiStatusSlice';
-import cartSlice from './actionReducer/cartSlice';
-import sidebarSlice from './actionReducer/sidebarSlice';
+import cartSlice from './slices/cartSlice';
+import sidebarSlice from './slices/sidebarSlice';
+import categorySlice from './slices/categories/categorySlice';
+import productSlice from './slices/products/productSlice';
 
 // Middleware to save state to localStorage
 const saveState = (state) => {
   try {
     const serializedCartState = JSON.stringify(state.cart);
-    localStorage.setItem('cart', serializedCartState);
+    localStorage.setItem('cartItems', serializedCartState);
   } catch (err) {
     console.error("Could not save state", err);
   }
@@ -21,9 +22,10 @@ const localStorageMiddleware = store => next => action => {
 
 const store = configureStore({
   reducer: {
-    apiStatus: apiStatusSlice,
     cart: cartSlice,
     sidebar: sidebarSlice,
+    categories: categorySlice,
+    products: productSlice,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(localStorageMiddleware)

@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { calculateTotalPrice } from '../../utils/calculateTotalPrice';
+import { calculateTotalPrice } from '@/utils/calculateTotalPrice';
 const initialState = {
   items: [],
   totalPrice: 0
@@ -7,7 +7,7 @@ const initialState = {
 
 const loadState = () => {
   try {
-    const serializedState = localStorage.getItem('cart');
+    const serializedState = localStorage.getItem('cartItems');
     if (serializedState === null) {
       return initialState;
     }
