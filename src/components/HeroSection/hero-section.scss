@@ -1,0 +1,49 @@
+@use '@/assets/style/variable' as *;
+.hero{
+    .banner-content {
+      min-height: 483px;
+      max-width: 547px;
+      h1{
+        font-family: $secondary-font;
+        text-transform: capitalize;
+        font-size:80px;
+        line-height: 120%;
+        span{
+          display: block;
+          background: $heading-gradiant;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .button-gradient-border {
+        position: relative;
+        width: 251px;
+        height: 66px;
+        padding: 18px 24px;
+        color: white;
+        cursor: pointer;
+        z-index: 1;
+        display: block;
+        overflow: hidden;
+        font-size: 22px;
+        line-height: 140%;
+        font-weight: 700;
+        border-radius: 35px;
+        text-decoration: none;
+        margin-top: 60px;
+        text-transform: capitalize;
+        &::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          padding: 3px;
+          border-radius: 35px;
+          background: linear-gradient(95.12deg, #DB5095 7.77%, #1945E8 95.93%);
+          -webkit-mask: linear-gradient(white 0 0) content-box, linear-gradient(white 0 0);
+          -webkit-mask-composite: xor;
+          mask-composite: exclude;
+          z-index: -1;
+        }
+      }
+    }
+}

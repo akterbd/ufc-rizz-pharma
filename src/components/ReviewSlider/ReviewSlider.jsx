@@ -16,45 +16,45 @@ const reviews = [
 ];
 
 const ReviewSlider = () => {
-//   const isCentered = reviews.length < 6;
-
   return (
-    <div className="review-slider">
-      <h2>Hear What <span>Rizz</span> Patients Have To Say</h2>
-      <Swiper
-        slidesPerView="auto"
-        centeredSlides={true}
-        initialSlide={2}
-        spaceBetween={20}
-        // loop={true}
-        pagination={{ clickable: true }}
-        modules={[Pagination]}
-        className="mySwiper"
-      >
-        {reviews.map((review) => (
-          <SwiperSlide key={review.id}>
-            <div className="review-item">
-                <div className="img">
-                    <img src={quate} alt="quate" />
-                </div>
-                <div className="quate">{review.review}</div>
-                <div className="review-star">
-                  <StarRating value={Number(review.rating)} />
-                </div>
-                <div className="review-author">
-                    <div className="author-img">
-                        <img src={review.authorImg} alt="Author Img" />
-                    </div>
-                    <div className="author-info">
-                        <h5>{review.name}</h5>
-                        <p className="mb-0">{review.designation}</p>
-                    </div>
-                </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <section className="reviews">
+      <div className="review-slider">
+        <h2>Hear What <span>Rizz</span> Patients Have To Say</h2>
+        <Swiper
+          slidesPerView="auto"
+          centeredSlides={true}
+          initialSlide={2}
+          spaceBetween={20}
+          // loop={true}
+          pagination={{ clickable: true }}
+          modules={[Pagination]}
+          className="mySwiper"
+        >
+          {reviews.map((review) => (
+            <SwiperSlide key={review.id}>
+              <div className="review-item">
+                  <div className="img">
+                      <img src={quate} alt="quate" />
+                  </div>
+                  <div className="quate">{review.review}</div>
+                  <div className="review-star">
+                    <StarRating value={Number(review.rating)} />
+                  </div>
+                  <div className="review-author">
+                      <div className="author-img">
+                          <img src={review.authorImg} alt="Author Img" />
+                      </div>
+                      <div className="author-info">
+                          <h5>{review.name}</h5>
+                          <p className="mb-0">{review.designation}</p>
+                      </div>
+                  </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+    </section>
   );
 };
 

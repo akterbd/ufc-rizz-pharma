@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "./category-slider.scss";
 
 const CategorySlider = () => {
   const items = ["All", "Best Selling Products", "Weight Loss", "Beauty And Hair Loss", "Testosterone/HRT", "Sexual Health", "Weight Loss", "Beauty And Hair Loss", "Testosterone/HRT", "Sexual Health"];

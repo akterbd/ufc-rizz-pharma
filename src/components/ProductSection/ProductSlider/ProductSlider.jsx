@@ -6,6 +6,7 @@ import { Grid, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/navigation";
+import "./product-slider.scss";
 
 const ProductSlider = () => {
   const items = Array.from({ length: 12 }, (_, i) => `Item ${i + 1}`);
