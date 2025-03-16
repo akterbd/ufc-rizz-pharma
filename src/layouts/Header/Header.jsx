@@ -3,11 +3,12 @@ import logo from "./../../assets/img/UFC_RIZZ Logo.png";
 import instagram from "./../../assets/img/instagram-outline.svg";
 import facebook from "./../../assets/img/facebook-outline.svg";
 import cartIcon from "./../../assets/img/cart-white.svg";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import "./header.scss";
 const Header = () => {
+  const location = useLocation();
   return (
-    <header className="main-header">
+    <header className={`main-header ${location.pathname !== "/" ? "otherpage" : ""}`}>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-dark">
             <Link className="navbar-brand" to="/">
@@ -20,7 +21,7 @@ const Header = () => {
             <div className="collapse navbar-collapse flex-column align-items-end" id="navbarSupportedContent">
               <div className="main-nav d-flex">
                 <ul className="navbar-nav ml-auto">
-                  <li className="nav-item active">
+                  <li className={`nav-item ${location.pathname === "/" ? "active" : ""}`}>
                     <Link className="nav-link" to="/">Home</Link>
                   </li>
                   <li className="nav-item dropdown">
@@ -28,10 +29,10 @@ const Header = () => {
                       Category
                     </a>
                     <div className="dropdown-menu">
-                      <Link className="dropdown-item" to="#">Dropdone Item 1</Link>
-                      <Link className="dropdown-item" to="#">Dropdone Item 2</Link>
-                      <Link className="dropdown-item" to="#">Dropdone Item 3</Link>
-                      <Link className="dropdown-item" to="#">Dropdone Item 4</Link>
+                      <Link className="dropdown-item" to="#">Weight Loss</Link>
+                      <Link className="dropdown-item" to="#">Beauty And Hair Loss</Link>
+                      <Link className="dropdown-item" to="#">Testosterone/HRT</Link>
+                      <Link className="dropdown-item" to="#">Sexual Health</Link>
                     </div>
                   </li>
                   <li className="nav-item dropdown">
@@ -39,17 +40,17 @@ const Header = () => {
                       Top Products
                     </a>
                     <div className="dropdown-menu">
-                      <Link className="dropdown-item" to="#">Dropdone Item 1</Link>
-                      <Link className="dropdown-item" to="#">Dropdone Item 2</Link>
-                      <Link className="dropdown-item" to="#">Dropdone Item 3</Link>
-                      <Link className="dropdown-item" to="#">Dropdone Item 4</Link>
+                      <Link className="dropdown-item" to="#">Retarutide</Link>
+                      <Link className="dropdown-item" to="#">Lyopholized Oxytocin</Link>
+                      <Link className="dropdown-item" to="#">Compounded NAD+ 1000 mg</Link>
+                      <Link className="dropdown-item" to="#">2X CJC / Ipamorelin</Link>
                     </div>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="">Contact Us</Link>
+                  <li className={`nav-item ${location.pathname === "/contact-us" ? "active" : ""}`}>
+                    <Link className="nav-link" to="/contact-us">Contact Us</Link>
                   </li>
-                  <li className="nav-item">
-                    <Link className="nav-link" to="">FAQs</Link>
+                  <li className={`nav-item ${location.pathname === "/faq" ? "active" : ""}`}>
+                    <Link className="nav-link" to="/faq">FAQs</Link>
                   </li>
                 </ul>
                 <ul className="social d-flex">

@@ -1,10 +1,10 @@
 
-import MainLayout from "./layouts/MainLayout/MainLayout";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
     <>
-      <MainLayout />
+      <AppRoutes />
     </>
   )
 }

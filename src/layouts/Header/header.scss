@@ -4,6 +4,9 @@ header.main-header{
     padding-bottom: 25px;
     position: absolute;
     width: 100%;
+    &.otherpage{
+      background-color: #172c55;
+    }
     + main{
       padding-top:200px;
     }
