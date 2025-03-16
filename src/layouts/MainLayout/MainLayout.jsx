@@ -6,8 +6,8 @@ import ReviewSlider from "../../components/ReviewSlider/ReviewSlider"
 import { Search } from "../../components/Search/Search"
 import ShopByCategory from "../../components/ShopByCategory/ShopByCategory"
 import Support from "../../components/SupportSection/Support"
-import Footer from "../footer/Footer"
-import Header from "../header/Header"
+import Footer from "../Footer/Footer"
+import Header from "../Header/Header"
 
 const MainLayout = () => {
   return (
