@@ -4,11 +4,13 @@ import Home from '../pages/Home';
 import NotFound from '../pages/NotFound';
 import ContactUs from '../pages/ContactUs';
 import Faq from '../pages/Faq';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 
 const AppRoutes = () => {
     return (
         <Router>
+            <ScrollToTop />
             <Routes>
                 <Route path="/" element={<MainLayout />}>
                     <Route index element={<Home />} />

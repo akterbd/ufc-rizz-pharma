@@ -14,7 +14,7 @@
     }
     .shop-by-category{
         .grid-container {
-            grid-template-columns: repeat(auto-fill, 290px);
+            grid-template-columns: repeat(auto-fill, 300px);
             gap: 15px;
             .grid-item{
                 h3 {
@@ -58,30 +58,54 @@
     header.main-header {
         padding-top: 20px;
         padding-bottom: 20px;
+        &.scrolled{
+            .navbar-brand{
+                img{
+                    max-width: 60px;
+                }
+            }
+            .auth-area {
+                margin-top: 18px;
+            }
+            button.navbar-toggler {
+                top: 22px;
+            }
+        }
+        .navbar-brand{
+            img{
+                max-width: 80px;
+            }
+        }
+        button.navbar-toggler {
+            position: absolute;
+            right: 0;
+            top: 33px;
+            border: none;
+            padding: 0px;
+        }
+        .auth-area {
+            margin-top: 30px;
+            right: 52px;
+            gap: 20px;
+        }
+        + main {
+            padding-top: 140px;
+        }
+    
     }
-    header.main-header nav.navbar .navbar-brand img {
-        max-width: 80px;
-    }
-    button.navbar-toggler {
-        position: absolute;
-        right: 0;
-        top: 30px;
-    }
-    header.main-header .auth-area {
-        margin-top: 30px;
-        right: 80px;
-    }
-    header.main-header + main {
-        padding-top: 140px;
-    }
-
     .hero .banner-content {
         min-height: 390px;
+        .button-gradient-border {
+            width: 230px;
+            height: 60px;
+            padding: 18px 24px;
+            font-size: 18px;
+        }
     }
 
     .shop-by-category{
         .grid-container {
-            grid-template-columns: repeat(auto-fill, 230px);
+            grid-template-columns: repeat(auto-fill, 220px);
             .grid-item{
                 h3 {
                     font-size: 25px;
@@ -98,12 +122,14 @@
     .support-section {
         padding: 45px 0;
         margin-top: 70px;
-    }
-    .support-section .support-grid {
-        max-width: 720px;
-    }
-    .support-section .support-grid .support-item .support-text h4 {
-        font-size: 18px;
+        .support-grid {
+            max-width: 685px;
+            .support-item{
+                .support-text h4{
+                    font-size: 16px;
+                }
+            }
+        }
     }
 
     .product-section {
@@ -111,8 +137,14 @@
         padding-bottom: 100px;
     }
 
+    section.online100{
+        .overlay-content h3 {
+            font-size: 40px;
+        }
+    }
+
     h2.heading {
-        font-size: 40px;
+        font-size: 32px;
         margin-bottom: 40px;
     }
 
@@ -137,6 +169,40 @@
     
 }
 @media(max-width:767px){
+    header.main-header{
+        nav.navbar{
+            .main-nav{
+                margin-top: 15px;
+                display: block!important;
+                margin-left: 0px !important;
+                .navbar-nav {
+                    margin-left:0px!important;
+                    li{
+                        a{
+                            display: inline-block;
+                            &::before{
+                                height: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        div#navbarSupportedContent {
+            background: rgba(23, 43, 84, 0.95);
+            padding: 20px;
+        }
+        .social {
+            margin: 0px;
+            padding-left: 0;
+            border-top: 1px solid #2b469d;
+            margin-top: 20px;
+            padding-top: 20px;
+        }
+    }
+    .support-section {
+        padding: 30px 0;
+    }
     .hero .banner-content h1 {
         font-size: 38px;
         max-width: 370px;
@@ -189,10 +255,201 @@
         font-size: 30px;
         margin-bottom: 40px;
     }
+    section.online100{
+        .overlay-content h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+    }
 
     footer .newsletter {
         margin-bottom:40px;
     }
+    
+    
+}
 
+@media(max-width:576px){
+    header.main-header{
+        + main {
+            padding-top: 96px;
+        }
+        &.scrolled{
+            .navbar-brand{
+                img {
+                    max-width: 40px;
+                }
+            }
+            .auth-area {
+                margin-top: 7px;
+            }
+            button.navbar-toggler {
+                top: 9px;
+            }
+        }
+        .navbar-brand{
+            img {
+                max-width: 45px;
+            }
+        }
+        .auth-area {
+            margin-top: 8px;
+            gap: 10px;
+        }
+        button.navbar-toggler {
+            top: 10px;
+        }
+    }
+
+    .hero .banner-content {
+        min-height: auto;
+        padding-bottom: 25px;
+    }
+
+    .seach-area {
+        max-width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        .input-group input.form-control {
+            height: 70px;
+            font-size: 16px;
+        }
+    }
+
+    h2.heading {
+        font-size: 24px;
+        margin-bottom: 35px;
+    }
+
+    .shop-by-category{
+        .grid-container {
+            grid-template-columns: repeat(auto-fill, calc(50% - 8px));
+            .grid-item {
+                background: linear-gradient(120.29deg, #F27070 0%, #97B5FB 82%);
+                padding: 10px;
+                border-radius: 15px;
+                &:nth-child(odd) {
+                    height: 190px;
+                }
+                &:nth-child(even) {
+                    height: 190px;
+                }
+                h3 {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    .support-section{
+        .support-grid {
+            max-width: 100%;
+            flex-wrap: wrap;
+            display: flex;
+            padding: 0 15px;
+            .support-item {
+                width: calc(50% - 10px);
+            }
+        }
+    }
+
+    .category-nav-slider{
+        max-width: calc(100% - 72px);
+        .swiper-button-next-1 {
+            right: -60px;
+            
+        }
+        .btn.btn-dark {
+            width: 55px;
+            height: 37px;
+            
+        }
+        .custom-btn-slide {
+            width: auto;
+            font-size: 14px;
+            padding: 8px 15px;
+        }
+    }
+    .product-slider{
+        .product-item{
+            .product-info{
+                padding: 30px 10px 15px;
+                flex-direction: column;
+                .product-thumb {
+                    max-width: 100px;
+                } 
+            }
+            .price-area{
+                .add-to-cart {
+                    padding: 10px;
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
+        .slider-nav {
+            max-width: 145px;
+            .btn.btn-dark {
+                width: 45px;
+                height: 45px;
+            }
+        }
+    }
+    section.online100{
+        .overlay-content {
+            padding-top: 15px;
+            h3 {
+                font-size: 22px;
+                margin-bottom: 15px;
+            }
+            .list-item-support li {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 10px;
+                padding-left: 30px;
+                position: relative;
+            }
+        }
+    }
+    .review-slider {
+        padding: 40px 0;
+        .review-item {
+            width: 280px;
+            padding: 20px;
+            .quate {
+                font-size: 14px;
+                max-width: 225px;
+            }
+            .review-star {
+                gap: 13px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    footer{
+        padding-top: 40px;
+        .newsletter {
+            .newsletter-content{
+                h3 {
+                    font-size: 28px;
+                    font-weight: 400;
+                }
+                p {
+                    font-size: 16px;
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .footer-menu{
+            .footer-wedget ul li {
+                margin: 20px 0;
+            }
+        }
+        .social-icons {
+            justify-content: center;
+        }
+    }
     
 }
