@@ -57,6 +57,9 @@ const OffcanvasCart = () => {
                     ))
                 )}
             </ul>
+            <div className="py-2 text-right" style={{fontSize:"20px"}}>
+              Total: {formatPrice(totalPrice)}
+            </div>
         </div>
         <div className="cart-footer">
           <button className="btn">Checkout</button>
