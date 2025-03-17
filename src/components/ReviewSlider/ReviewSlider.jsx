@@ -5,7 +5,9 @@ import authorPhoto from "@/assets/img/review-author-img.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "./review-slider.scss";
 import StarRating from "./StarRating";
+import Heading from "../Heading/Heading";
 
 const reviews = [
   { id: 1, name: "John Williams", designation:"Lead designer", rating:4, authorImg:authorPhoto, review: "I’ve tried every home remedy and hair care treatment but ended up with long waits and no results. Since I’ve started using Hims my hair has grown, thickened, and darkened tremendously." },
@@ -19,7 +21,7 @@ const ReviewSlider = () => {
   return (
     <section className="reviews">
       <div className="review-slider">
-        <h2>Hear What <span>Rizz</span> Patients Have To Say</h2>
+        <Heading>Hear What <span>Rizz</span> Patients Have To Say</Heading>
         <Swiper
           slidesPerView="auto"
           centeredSlides={true}

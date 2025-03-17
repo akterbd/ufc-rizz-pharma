@@ -24,6 +24,8 @@
           display: flex;
           align-items: center;
           flex:1;
+          gap:5px;
+          padding: 12px 5px 0;
           .product-thumb {
             flex: 50%;
           }
@@ -35,6 +37,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 500;
+            line-height: 120%;
           }
         }
         .price-area {

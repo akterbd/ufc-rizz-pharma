@@ -1,7 +1,19 @@
 import addToCartDark from "@/assets/img/add-to-cart-dark.svg";
-import rizzReta from "@/assets/img/Rizz-Reta-GLP3-24mg.png";
 import { formatPrice } from "../../utils/priceFormat";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../store/slices/cartSlice";
 const ProductItem = (props) => {
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    const product = {
+      id: props.id,
+      title: props.title,
+      price: props.price,
+      image: props.thumbnail,
+      quantity: 1,
+    }
+    dispatch(addItem(product));
+  }
   return (
     <div className="product-item">
         <div className="badge-product">Research use only</div>
@@ -13,7 +25,7 @@ const ProductItem = (props) => {
         </div>
         <div className="price-area">
         <div className="price">{formatPrice(props.price)}</div>
-        <div className="add-to-cart">
+        <div className="add-to-cart" onClick={handleClick}>
             <img src={addToCartDark} alt="Add to Cart" />
         </div>
         </div>              

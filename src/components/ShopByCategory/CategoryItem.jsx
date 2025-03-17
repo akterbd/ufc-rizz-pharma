@@ -1,12 +1,12 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CategoryItem = ({title, shape, image}) => {
   return (
-    <div className="grid-item">
+    <Link className="grid-item" to="#">
         <h3>{title}</h3>
         <img className="shape" src={shape} alt="shape" />
-        <img className="category-img" src={image} alt="Weight Lose" />
-    </div>
+        <img className="category-img img-fluid" src={image} alt="Weight Lose" />
+    </Link>
   )
 }
 

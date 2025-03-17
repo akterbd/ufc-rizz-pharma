@@ -6,6 +6,7 @@ import "@/assets/style/main.scss";
 import App from './App.jsx'
 import { Provider } from 'react-redux';
 import store from './store';
+import "@/assets/style/responsive.scss";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

@@ -1,14 +1,31 @@
-import React from 'react';
-import logo from "./../../assets/img/UFC_RIZZ Logo.png";
-import instagram from "./../../assets/img/instagram-outline.svg";
-import facebook from "./../../assets/img/facebook-outline.svg";
+import React, { useEffect, useState } from 'react';
+import logo from "@/assets/img/UFC_RIZZ Logo.png";
+import instagram from "@/assets/img/instagram-outline.svg";
+import facebook from "@/assets/img/facebook-outline.svg";
 import { Link, useLocation } from 'react-router-dom';
 import "./header.scss";
 import CartIcon from './CartIcon';
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const location = useLocation();
   return (
-    <header className={`main-header ${location.pathname !== "/" ? "otherpage" : ""}`}>
+    <header className={`main-header ${location.pathname !== "/" ? "otherpage" : ""}  ${scrolled ? "scrolled" : ""}`}>
         <div className="container">
           <nav className="navbar navbar-expand-lg navbar-dark">
             <Link className="navbar-brand" to="/">
@@ -21,8 +38,8 @@ const Header = () => {
             <div className="collapse navbar-collapse flex-column align-items-end" id="navbarSupportedContent">
               <div className="main-nav d-flex">
                 <ul className="navbar-nav ml-auto">
-                  <li className={`nav-item ${location.pathname === "/" ? "active" : ""}`}>
-                    <Link className="nav-link" to="/">Home</Link>
+                  <li className="nav-item">
+                    <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} to="/">Home</Link>
                   </li>
                   <li className="nav-item dropdown">
                     <a className="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -46,11 +63,11 @@ const Header = () => {
                       <Link className="dropdown-item" to="#">2X CJC / Ipamorelin</Link>
                     </div>
                   </li>
-                  <li className={`nav-item ${location.pathname === "/contact-us" ? "active" : ""}`}>
-                    <Link className="nav-link" to="/contact-us">Contact Us</Link>
+                  <li className="nav-item">
+                    <Link className={`nav-link ${location.pathname === "/contact-us" ? "active" : ""}`} to="/contact-us">Contact Us</Link>
                   </li>
-                  <li className={`nav-item ${location.pathname === "/faq" ? "active" : ""}`}>
-                    <Link className="nav-link" to="/faq">FAQs</Link>
+                  <li className="nav-item">
+                    <Link className={`nav-link ${location.pathname === "/faq" ? "active" : ""}`} to="/faq">FAQs</Link>
                   </li>
                 </ul>
                 <ul className="social d-flex">
@@ -58,11 +75,11 @@ const Header = () => {
                   <li><a href="#"><img src={facebook} alt="Facebook" /></a></li>
                 </ul>
               </div>
-              <div className="auth-area d-flex align-items-center">
-                <Link className="sign-up" to="/sign-up">Sign Up</Link>
-                <Link to="/login">Log In</Link>
-                <CartIcon />
-              </div>
+            </div>
+            <div className="auth-area d-flex align-items-center">
+              <Link className="sign-up" to="/sign-up">Sign Up</Link>
+              <Link to="/login">Log In</Link>
+              <CartIcon />
             </div>
           </nav>
         </div>

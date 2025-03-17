@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
           <div className="row">
             <div className="col-md-12">
-              <img className="branding-logo" src={rizzPharma} alt="Rizz Pharma" />
+              <img className="branding-logo img-fluid" src={rizzPharma} alt="Rizz Pharma" />
             </div>
           </div>
       </div>

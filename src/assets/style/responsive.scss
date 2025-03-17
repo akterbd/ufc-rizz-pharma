@@ -1,5 +1,198 @@
+
+
 @media (min-width: 1200px) {
     .container{
         max-width: 1200px;
     }
+}
+@media(max-width:1200px){
+    .hero .banner-content h1 {
+        font-size: 60px;
+    }
+    .seach-area {
+        padding: 40px 0 50px;
+    }
+    .shop-by-category{
+        .grid-container {
+            grid-template-columns: repeat(auto-fill, 290px);
+            gap: 15px;
+            .grid-item{
+                h3 {
+                    font-size: 25px;
+                }            
+                &:nth-child(odd) {
+                    height: 380px;
+                }
+                &:nth-child(even) {
+                    height: 306px;
+                }
+            }
+        }
+    }
+
+    .support-section{
+        .support-grid {
+            max-width: 900px;
+            gap: 20px;
+            .support-item {
+                gap: 15px;
+            }
+        }
+    }
+
+
+    .category-nav-slider {
+        max-width: 835px;
+        .swiper-button-next-1 {
+            right: -95px;
+        }
+    }
+    .review-slider {
+        padding: 80px 0;
+        .review-item {
+            width: 315px;
+        }
+    }
+}
+@media(max-width:991px){
+    header.main-header {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    header.main-header nav.navbar .navbar-brand img {
+        max-width: 80px;
+    }
+    button.navbar-toggler {
+        position: absolute;
+        right: 0;
+        top: 30px;
+    }
+    header.main-header .auth-area {
+        margin-top: 30px;
+        right: 80px;
+    }
+    header.main-header + main {
+        padding-top: 140px;
+    }
+
+    .hero .banner-content {
+        min-height: 390px;
+    }
+
+    .shop-by-category{
+        .grid-container {
+            grid-template-columns: repeat(auto-fill, 230px);
+            .grid-item{
+                h3 {
+                    font-size: 25px;
+                }            
+                &:nth-child(odd) {
+                    height: 340px;
+                }
+                &:nth-child(even) {
+                    height: 266px;
+                }
+            }
+        }
+    }
+    .support-section {
+        padding: 45px 0;
+        margin-top: 70px;
+    }
+    .support-section .support-grid {
+        max-width: 720px;
+    }
+    .support-section .support-grid .support-item .support-text h4 {
+        font-size: 18px;
+    }
+
+    .product-section {
+        padding-top: 60px;
+        padding-bottom: 100px;
+    }
+
+    h2.heading {
+        font-size: 40px;
+        margin-bottom: 40px;
+    }
+
+    .category-nav-slider {
+        max-width: 625px;
+    }
+    .category-nav-slider .swiper-slide {
+        margin-right: 10px!important;
+    }
+
+    section.online100 .overlay h3 {
+        font-size: 40px;
+    }
+
+    footer .newsletter {
+        padding: 30px;
+        width: 100%;
+    }
+    footer .footer-menu .footer-wedget ul li a {
+        font-size: 14px;
+    }
+    
+}
+@media(max-width:767px){
+    .hero .banner-content h1 {
+        font-size: 38px;
+        max-width: 370px;
+    }
+    .seach-area {
+        max-width: 510px;
+    }
+
+    .shop-by-category{
+        .grid-container {
+            grid-template-columns: repeat(auto-fill, 247px);
+            .grid-item{
+                h3 {
+                    font-size: 25px;
+                }            
+                &:nth-child(odd) {
+                    height: 308px;
+                }
+                &:nth-child(even) {
+                    height: 308px;
+                }
+                &:nth-child(5n) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    section.online100{
+        .overlay {
+            padding-top: 70px;
+            h3 {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .support-section .support-grid {
+        max-width: 510px;
+        .support-item .support-text h4 {
+            font-size: 16px;
+        }
+    }
+
+    .category-nav-slider {
+        max-width: 416px;
+    }
+
+    h2.heading {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+
+    footer .newsletter {
+        margin-bottom:40px;
+    }
+
+    
 }

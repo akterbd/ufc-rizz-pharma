@@ -7,10 +7,9 @@ import "swiper/css/navigation";
 import "./product-slider.scss";
 import ProductItem from "../../ProductItem/ProductItem";
 import { useSelector } from "react-redux";
+import Loading from "../../Loader/Loading";
 
 const ProductSlider = () => {
-  const items = Array.from({ length: 12 }, (_, i) => `Item ${i + 1}`);
-
   const productLoading = useSelector((state) => state.products.loading);
   const productList = useSelector((state) => state.products.items);
   if (!productList) return;
@@ -23,8 +22,14 @@ const ProductSlider = () => {
         grid={{ rows: 2, fill: "row" }}
         spaceBetween={30}
         navigation={{ nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }}
+        breakpoints={{
+          320: { slidesPerView: 2, spaceBetween:"15" },
+          480: { slidesPerView: 2, spaceBetween:"15" },
+          1024: { slidesPerView: 3 },
+          1200: { slidesPerView: 4 },
+        }}
       >
-        {productList.map((item, index) => (
+        {productLoading ? <Loading /> : productList.map((item, index) => (
           <SwiperSlide key={index}>
             <ProductItem {...item} />
           </SwiperSlide>

@@ -1,3 +1,4 @@
+import OffcanvasCart from "../../components/OffcanvasSidebarCart/OffcanvasSidebarCart";
 import Footer from "../Footer/Footer"
 import Header from "../Header/Header"
 import { Outlet, useLocation } from "react-router-dom";
@@ -11,6 +12,7 @@ const MainLayout = () => {
           <Outlet />
         </main>
         <Footer />
+        <OffcanvasCart />
     </>
   )
 }

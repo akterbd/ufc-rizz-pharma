@@ -9,12 +9,9 @@ import { getProductByCategory, getProducts } from "../../../store/slices/product
 
 const CategorySlider = () => {
   const dispatch = useDispatch();
-  const categoryLoading = useSelector((state) => state.categories.loading);
   const categoryList = useSelector((state) => state.categories.items);
   if (!categoryList) return;
 
-
-  const items = ["All", "Best Selling Products", "Weight Loss", "Beauty And Hair Loss", "Testosterone/HRT", "Sexual Health", "Weight Loss", "Beauty And Hair Loss", "Testosterone/HRT", "Sexual Health"];
   const [activeIndex, setActiveIndex] = useState(0);
   const handleButtonClick = (index, slug) => {
     if(slug == "all"){
